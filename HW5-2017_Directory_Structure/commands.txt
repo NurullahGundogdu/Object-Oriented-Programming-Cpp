@@ -1,0 +1,4 @@
+copy A B
+move A B
+delete A
+cd A

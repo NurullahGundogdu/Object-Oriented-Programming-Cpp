@@ -1,3 +1,6 @@
+/* This project has not been completed. */
+
+
 #include <iostream>
 #include <string>
 #include <vector>
@@ -69,7 +72,7 @@ int main(){
     player eno;
     eno.boardFill();
     srand (time(NULL));
-    random=rand()%5+1;      // X ve Y baslangic nokatalarinin random atanmasý icin sayi uretilir
+    random=rand()%5+1;      // X ve Y baslangic nokatalarinin random atanmasÃ½ icin sayi uretilir
     random2=rand()%5+1;
 
     eno.users(random,random2);          //degerler users fonksiyonuna yollanir
@@ -131,7 +134,7 @@ int main(){
 
 /*
         exit=eno.checkExit();
-        if(exit==1)         //bu bolumde oyunun bitme kontrolu yapiliyor ama bitmedigi icin acýk bulundurmadim
+        if(exit==1)         //bu bolumde oyunun bitme kontrolu yapiliyor ama bitmedigi icin acÃ½k bulundurmadim
             break;
 */
         if(say==2){

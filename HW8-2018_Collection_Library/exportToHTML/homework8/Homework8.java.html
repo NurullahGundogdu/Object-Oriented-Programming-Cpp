@@ -1,0 +1,952 @@
+<html>
+<head>
+<title>Homework8.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: #606366; font-weight: normal; font-style: normal; }
+.s0 { color: rgb(128,128,128); }
+.s1 { color: rgb(169,183,198); }
+.s2 { color: rgb(204,120,50); }
+.s3 { color: rgb(98,151,85); font-style: italic; }
+.s4 { color: rgb(98,151,85); font-weight: bold; font-style: italic; }
+.s5 { color: rgb(106,135,89); }
+.s6 { color: rgb(104,151,187); }
+</style>
+</head>
+<BODY BGCOLOR="#2b2b2b">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+Homework8.java</FONT>
+</center></TD></TR></TABLE>
+<pre>
+<span class="s0">/* 
+ * To change this license header, choose License Headers in Project Properties. 
+ * To change this template file, choose Tools | Templates 
+ * and open the template in the editor. 
+ */</span><span class="s1"> 
+ 
+</span><span class="s2">package </span><span class="s1">homework8</span><span class="s2">;</span><span class="s1"> 
+ 
+</span><span class="s3">/** 
+ * </span><span class="s4">@author </span><span class="s3">Nurullah GUNDOGDU 
+ * since 2019-1-16 
+ */</span><span class="s1"> 
+ 
+</span><span class="s2">public class </span><span class="s1">Homework8 { 
+ 
+    </span><span class="s3">/** 
+     * </span><span class="s4">@param </span><span class="s3">args the command line arguments 
+     */</span><span class="s1"> 
+    </span><span class="s2">public static void </span><span class="s1">main(String[] args) { 
+ 
+        link_list_int()</span><span class="s2">;</span><span class="s1"> 
+        link_list_string()</span><span class="s2">;</span><span class="s1"> 
+        array_list_int()</span><span class="s2">;</span><span class="s1"> 
+        array_list_string()</span><span class="s2">;</span><span class="s1"> 
+        hash_set_int()</span><span class="s2">;</span><span class="s1"> 
+        hash_set_string()</span><span class="s2">;</span><span class="s1"> 
+ 
+    } 
+ 
+    </span><span class="s3">/** 
+     * link_list_int method is to test the linklist for int 
+     */</span><span class="s1"> 
+    </span><span class="s2">private static void </span><span class="s1">link_list_int(){ 
+        System.out.println(</span><span class="s5">&quot;**************************************&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        System.out.println(</span><span class="s5">&quot;**********LinkedList integer**********&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        System.out.println(</span><span class="s5">&quot;**************************************&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        linkList&lt;Integer&gt; linkLstTest = </span><span class="s2">new </span><span class="s1">linkList&lt;&gt;()</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">try </span><span class="s1">{ 
+            System.out.println(</span><span class="s5">&quot;Elements add to linkLstTest&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+            linkLstTest.add(</span><span class="s6">1</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+            linkLstTest.add(</span><span class="s6">1</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+            linkLstTest.add(</span><span class="s6">3</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+            linkLstTest.add(</span><span class="s6">4</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+            linkLstTest.add(</span><span class="s6">5</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        } </span><span class="s2">catch </span><span class="s1">(Exception ex) { 
+            System.out.println(</span><span class="s5">&quot;TEST ERROR&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+            </span><span class="s2">throw </span><span class="s1">ex</span><span class="s2">;</span><span class="s1"> 
+        } 
+ 
+        Iterator iter=linkLstTest.iterator()</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">while</span><span class="s1">(iter.hasNext()) 
+            System.out.print(iter.next()+</span><span class="s5">&quot; &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println()</span><span class="s2">;</span><span class="s1"> 
+        System.out.println(</span><span class="s5">&quot;Size of linkLstTest : &quot; </span><span class="s1">+ linkLstTest.size())</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println(</span><span class="s5">&quot;Elements add to linkLstTest2&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        linkList&lt;Integer&gt; linkLstTest2 = </span><span class="s2">new </span><span class="s1">linkList&lt;&gt;()</span><span class="s2">;</span><span class="s1"> 
+        linkLstTest2.add(</span><span class="s6">34</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        linkLstTest2.add(</span><span class="s6">6</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        linkLstTest2.add(</span><span class="s6">7</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        linkLstTest2.add(</span><span class="s6">8</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        Iterator iter2=linkLstTest2.iterator()</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">while</span><span class="s1">(iter2.hasNext()) 
+            System.out.print(iter2.next()+</span><span class="s5">&quot; &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println()</span><span class="s2">;</span><span class="s1"> 
+        System.out.println(</span><span class="s5">&quot;Size of linkLstTest2 : &quot; </span><span class="s1">+ linkLstTest2.size())</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println(</span><span class="s5">&quot;linkLstTest2 elements add to linkLstTest&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        linkLstTest.addAll(linkLstTest2)</span><span class="s2">;</span><span class="s1"> 
+ 
+        iter=linkLstTest.iterator()</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">while</span><span class="s1">(iter.hasNext()) 
+            System.out.print(iter.next()+</span><span class="s5">&quot; &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println()</span><span class="s2">;</span><span class="s1"> 
+        System.out.println(</span><span class="s5">&quot;Size of linkLstTest : &quot; </span><span class="s1">+ linkLstTest.size())</span><span class="s2">;</span><span class="s1"> 
+ 
+ 
+        System.out.println(</span><span class="s5">&quot;Remove element '3' from linkLstTest&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        linkLstTest.remove(</span><span class="s6">3</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        iter=linkLstTest.iterator()</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">while</span><span class="s1">(iter.hasNext()) 
+            System.out.print(iter.next()+</span><span class="s5">&quot; &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println()</span><span class="s2">;</span><span class="s1"> 
+        System.out.println(</span><span class="s5">&quot;Size of linkLstTest : &quot; </span><span class="s1">+ linkLstTest.size())</span><span class="s2">;</span><span class="s1"> 
+ 
+ 
+        System.out.println(</span><span class="s5">&quot;Remove linkLstTest2 elements from linkLstTest&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        linkLstTest.removeAll(linkLstTest2)</span><span class="s2">;</span><span class="s1"> 
+ 
+        iter=linkLstTest.iterator()</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">while</span><span class="s1">(iter.hasNext()) 
+            System.out.print(iter.next()+</span><span class="s5">&quot; &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println()</span><span class="s2">;</span><span class="s1"> 
+        System.out.println(</span><span class="s5">&quot;Size of linkLstTest : &quot; </span><span class="s1">+ linkLstTest.size())</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println(</span><span class="s5">&quot;Clear linkLstTest2&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        linkLstTest2.clear()</span><span class="s2">;</span><span class="s1"> 
+        System.out.println(</span><span class="s5">&quot;Size of linkLstTest2 : &quot; </span><span class="s1">+ linkLstTest2.size())</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println(</span><span class="s5">&quot;Elements add to linkLstTest3&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        linkList&lt;Integer&gt; linkLstTest3 = </span><span class="s2">new </span><span class="s1">linkList&lt;&gt;()</span><span class="s2">;</span><span class="s1"> 
+        linkLstTest3.add(</span><span class="s6">11</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        linkLstTest3.add(</span><span class="s6">16</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        linkLstTest3.add(</span><span class="s6">17</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        linkLstTest3.add(</span><span class="s6">18</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        linkLstTest3.add(</span><span class="s6">20</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        linkLstTest3.add(</span><span class="s6">55</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        linkLstTest3.add(</span><span class="s6">889</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        Iterator iter3=linkLstTest3.iterator()</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">while</span><span class="s1">(iter3.hasNext()) 
+            System.out.print(iter3.next()+</span><span class="s5">&quot; &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println()</span><span class="s2">;</span><span class="s1"> 
+        System.out.println(</span><span class="s5">&quot;Size of linkLstTest3 : &quot; </span><span class="s1">+ linkLstTest3.size())</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println(</span><span class="s5">&quot;Elements add to linkLstTest4&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        linkList&lt;Integer&gt; linkLstTest4 = </span><span class="s2">new </span><span class="s1">linkList&lt;&gt;()</span><span class="s2">;</span><span class="s1"> 
+        linkLstTest4.add(</span><span class="s6">11</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        linkLstTest4.add(</span><span class="s6">16</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        Iterator iter4=linkLstTest4.iterator()</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">while</span><span class="s1">(iter4.hasNext()) 
+            System.out.print(iter4.next()+</span><span class="s5">&quot; &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println()</span><span class="s2">;</span><span class="s1"> 
+        System.out.println(</span><span class="s5">&quot;Size of linkLstTest4 : &quot; </span><span class="s1">+ linkLstTest4.size())</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.print(</span><span class="s5">&quot;Contains function for element '18' in linkLstTest3 = &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">if</span><span class="s1">(linkLstTest3.contains(</span><span class="s6">18</span><span class="s1">)) 
+            System.out.println(</span><span class="s5">&quot;true&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">else</span><span class="s1"> 
+            System.out.println(</span><span class="s5">&quot;false&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.print(</span><span class="s5">&quot;Contains function for element '0' in linkLstTest3 = &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">if</span><span class="s1">(linkLstTest3.contains(</span><span class="s6">0</span><span class="s1">)) 
+            System.out.println(</span><span class="s5">&quot;true&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">else</span><span class="s1"> 
+            System.out.println(</span><span class="s5">&quot;false&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.print(</span><span class="s5">&quot;ContainsAll function for linkLstTest4 elements in linkLstTest3 = &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">if</span><span class="s1">(linkLstTest3.containsAll(linkLstTest4)) 
+            System.out.println(</span><span class="s5">&quot;true&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">else</span><span class="s1"> 
+            System.out.println(</span><span class="s5">&quot;false&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println(</span><span class="s5">&quot;RetainAll function for linkLstTest3 between linkLstTest4&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        System.out.println(</span><span class="s5">&quot;linkLstTest3 elements : &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        linkLstTest3.retainAll(linkLstTest4)</span><span class="s2">;</span><span class="s1"> 
+        iter3=linkLstTest3.iterator()</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">while</span><span class="s1">(iter3.hasNext()) 
+            System.out.print(iter3.next()+</span><span class="s5">&quot; &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println()</span><span class="s2">;</span><span class="s1"> 
+        System.out.println(</span><span class="s5">&quot;Size of linkLstTest3 : &quot; </span><span class="s1">+ linkLstTest3.size())</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.print(</span><span class="s5">&quot;linkLstTest3 is empty = &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">if</span><span class="s1">(linkLstTest3.isEmpty()) 
+            System.out.println(</span><span class="s5">&quot;true&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">else</span><span class="s1"> 
+            System.out.println(</span><span class="s5">&quot;false&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println(</span><span class="s5">&quot;Add element linkLstTest3 using offer function.&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        linkLstTest3.offer(</span><span class="s6">45</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        linkLstTest3.offer(</span><span class="s6">71</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        iter3=linkLstTest3.iterator()</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">while</span><span class="s1">(iter3.hasNext()) 
+            System.out.print(iter3.next()+</span><span class="s5">&quot; &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        System.out.println()</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println(</span><span class="s5">&quot;First element of linkLstTest3 (using element function) : &quot;</span><span class="s1">+ linkLstTest3.element())</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println(</span><span class="s5">&quot;First element of linkLstTest3 (using poll function) : &quot;</span><span class="s1">+ linkLstTest3.poll())</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println(</span><span class="s5">&quot;After poll function first element of linkLstTest3 remove from list.&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        iter3=linkLstTest3.iterator()</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">while</span><span class="s1">(iter3.hasNext()) 
+            System.out.print(iter3.next()+</span><span class="s5">&quot; &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        System.out.println()</span><span class="s2">;</span><span class="s1"> 
+ 
+        iter3=linkLstTest3.iterator()</span><span class="s2">;</span><span class="s1"> 
+        iter3.remove()</span><span class="s2">;</span><span class="s1"> 
+ 
+    } 
+ 
+    </span><span class="s3">/** 
+     * link_list_string method is to test the linklist for string 
+     */</span><span class="s1"> 
+    </span><span class="s2">private static void </span><span class="s1">link_list_string(){ 
+        System.out.println(</span><span class="s5">&quot;**************************************&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        System.out.println(</span><span class="s5">&quot;**********LinkedList String***********&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        System.out.println(</span><span class="s5">&quot;**************************************&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        linkList&lt;String&gt; linkLstTest = </span><span class="s2">new </span><span class="s1">linkList&lt;&gt;()</span><span class="s2">;</span><span class="s1"> 
+ 
+        </span><span class="s2">try </span><span class="s1">{ 
+            System.out.println(</span><span class="s5">&quot;Elements add to linkLstTest&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+            linkLstTest.add(</span><span class="s5">&quot;e&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+            linkLstTest.add(</span><span class="s5">&quot;m&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+            linkLstTest.add(</span><span class="s5">&quot;r&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+            linkLstTest.add(</span><span class="s5">&quot;e&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+            linkLstTest.add(</span><span class="s5">&quot;a&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        } </span><span class="s2">catch </span><span class="s1">(Exception ex) { 
+            System.out.println(</span><span class="s5">&quot;TEST ERROR&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+            </span><span class="s2">throw </span><span class="s1">ex</span><span class="s2">;</span><span class="s1"> 
+        } 
+ 
+        Iterator iter=linkLstTest.iterator()</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">while</span><span class="s1">(iter.hasNext()) 
+            System.out.print(iter.next()+</span><span class="s5">&quot; &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println()</span><span class="s2">;</span><span class="s1"> 
+        System.out.println(</span><span class="s5">&quot;Size of linkLstTest : &quot; </span><span class="s1">+ linkLstTest.size())</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println(</span><span class="s5">&quot;Elements add to linkLstTest2&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        linkList&lt;String&gt; linkLstTest2 = </span><span class="s2">new </span><span class="s1">linkList&lt;&gt;()</span><span class="s2">;</span><span class="s1"> 
+        linkLstTest2.add(</span><span class="s5">&quot;ooo&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        linkLstTest2.add(</span><span class="s5">&quot;t&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        linkLstTest2.add(</span><span class="s5">&quot;k&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        linkLstTest2.add(</span><span class="s5">&quot;l&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        Iterator iter2=linkLstTest2.iterator()</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">while</span><span class="s1">(iter2.hasNext()) 
+            System.out.print(iter2.next()+</span><span class="s5">&quot; &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println()</span><span class="s2">;</span><span class="s1"> 
+        System.out.println(</span><span class="s5">&quot;Size of linkLstTest2 : &quot; </span><span class="s1">+ linkLstTest2.size())</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println(</span><span class="s5">&quot;linkLstTest2 elements add to linkLstTest&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        linkLstTest.addAll(linkLstTest2)</span><span class="s2">;</span><span class="s1"> 
+ 
+        iter=linkLstTest.iterator()</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">while</span><span class="s1">(iter.hasNext()) 
+            System.out.print(iter.next()+</span><span class="s5">&quot; &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println()</span><span class="s2">;</span><span class="s1"> 
+        System.out.println(</span><span class="s5">&quot;Size of linkLstTest : &quot; </span><span class="s1">+ linkLstTest.size())</span><span class="s2">;</span><span class="s1"> 
+ 
+ 
+        System.out.println(</span><span class="s5">&quot;Remove element 'r' from linkLstTest&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        linkLstTest.remove(</span><span class="s5">&quot;r&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        iter=linkLstTest.iterator()</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">while</span><span class="s1">(iter.hasNext()) 
+            System.out.print(iter.next()+</span><span class="s5">&quot; &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println()</span><span class="s2">;</span><span class="s1"> 
+        System.out.println(</span><span class="s5">&quot;Size of linkLstTest : &quot; </span><span class="s1">+ linkLstTest.size())</span><span class="s2">;</span><span class="s1"> 
+ 
+ 
+        System.out.println(</span><span class="s5">&quot;Remove linkLstTest2 elements from linkLstTest&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        linkLstTest.removeAll(linkLstTest2)</span><span class="s2">;</span><span class="s1"> 
+ 
+        iter=linkLstTest.iterator()</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">while</span><span class="s1">(iter.hasNext()) 
+            System.out.print(iter.next()+</span><span class="s5">&quot; &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println()</span><span class="s2">;</span><span class="s1"> 
+        System.out.println(</span><span class="s5">&quot;Size of linkLstTest : &quot; </span><span class="s1">+ linkLstTest.size())</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println(</span><span class="s5">&quot;Clear linkLstTest2&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        linkLstTest2.clear()</span><span class="s2">;</span><span class="s1"> 
+        System.out.println(</span><span class="s5">&quot;Size of linkLstTest2 : &quot; </span><span class="s1">+ linkLstTest2.size())</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println(</span><span class="s5">&quot;Elements add to linkLstTest3&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        linkList&lt;String&gt; linkLstTest3 = </span><span class="s2">new </span><span class="s1">linkList&lt;&gt;()</span><span class="s2">;</span><span class="s1"> 
+        linkLstTest3.add(</span><span class="s5">&quot;h&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        linkLstTest3.add(</span><span class="s5">&quot;x&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        linkLstTest3.add(</span><span class="s5">&quot;e&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        linkLstTest3.add(</span><span class="s5">&quot;s&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        Iterator iter3=linkLstTest3.iterator()</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">while</span><span class="s1">(iter3.hasNext()) 
+            System.out.print(iter3.next()+</span><span class="s5">&quot; &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println()</span><span class="s2">;</span><span class="s1"> 
+        System.out.println(</span><span class="s5">&quot;Size of linkLstTest3 : &quot; </span><span class="s1">+ linkLstTest3.size())</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println(</span><span class="s5">&quot;Elements add to linkLstTest4&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        linkList&lt;String&gt; linkLstTest4 = </span><span class="s2">new </span><span class="s1">linkList&lt;&gt;()</span><span class="s2">;</span><span class="s1"> 
+        linkLstTest4.add(</span><span class="s5">&quot;h&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        linkLstTest4.add(</span><span class="s5">&quot;x&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        Iterator iter4=linkLstTest4.iterator()</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">while</span><span class="s1">(iter4.hasNext()) 
+            System.out.print(iter4.next()+</span><span class="s5">&quot; &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println()</span><span class="s2">;</span><span class="s1"> 
+        System.out.println(</span><span class="s5">&quot;Size of linkLstTest4 : &quot; </span><span class="s1">+ linkLstTest4.size())</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.print(</span><span class="s5">&quot;Contains function for element 'z' in linkLstTest3 = &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">if</span><span class="s1">(linkLstTest3.contains(</span><span class="s5">&quot;z&quot;</span><span class="s1">)) 
+            System.out.println(</span><span class="s5">&quot;true&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">else</span><span class="s1"> 
+            System.out.println(</span><span class="s5">&quot;false&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.print(</span><span class="s5">&quot;Contains function for element 'x' in linkLstTest3 = &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">if</span><span class="s1">(linkLstTest3.contains(</span><span class="s5">&quot;x&quot;</span><span class="s1">)) 
+            System.out.println(</span><span class="s5">&quot;true&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">else</span><span class="s1"> 
+            System.out.println(</span><span class="s5">&quot;false&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.print(</span><span class="s5">&quot;ContainsAll function for linkLstTest4 elements in linkLstTest3 = &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">if</span><span class="s1">(linkLstTest3.containsAll(linkLstTest4)) 
+            System.out.println(</span><span class="s5">&quot;true&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">else</span><span class="s1"> 
+            System.out.println(</span><span class="s5">&quot;false&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println(</span><span class="s5">&quot;RetainAll function for linkLstTest3 between linkLstTest4&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        linkLstTest3.retainAll(linkLstTest4)</span><span class="s2">;</span><span class="s1"> 
+        iter3=linkLstTest3.iterator()</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">while</span><span class="s1">(iter3.hasNext()) 
+            System.out.print(iter3.next()+</span><span class="s5">&quot; &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println()</span><span class="s2">;</span><span class="s1"> 
+        System.out.println(</span><span class="s5">&quot;Size of linkLstTest3 : &quot; </span><span class="s1">+ linkLstTest3.size())</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.print(</span><span class="s5">&quot;linkLstTest3 is empty = &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">if</span><span class="s1">(linkLstTest3.isEmpty()) 
+            System.out.println(</span><span class="s5">&quot;true&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">else</span><span class="s1"> 
+            System.out.println(</span><span class="s5">&quot;false&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        System.out.println(</span><span class="s5">&quot;Add element linkLstTest3 using offer function.&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        linkLstTest3.offer(</span><span class="s5">&quot;GTU&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        linkLstTest3.offer(</span><span class="s5">&quot;BM&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        iter3=linkLstTest3.iterator()</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">while</span><span class="s1">(iter3.hasNext()) 
+            System.out.print(iter3.next()+</span><span class="s5">&quot; &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        System.out.println()</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println(</span><span class="s5">&quot;First element of linkLstTest3 (using element function) : &quot;</span><span class="s1">+ linkLstTest3.element())</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println(</span><span class="s5">&quot;First element of linkLstTest3 (using poll function) : &quot;</span><span class="s1">+ linkLstTest3.poll())</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println(</span><span class="s5">&quot;After poll function first element of linkLstTest3 remove from list.&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        iter3=linkLstTest3.iterator()</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">while</span><span class="s1">(iter3.hasNext()) 
+            System.out.print(iter3.next()+</span><span class="s5">&quot; &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        System.out.println()</span><span class="s2">;</span><span class="s1"> 
+ 
+        iter3=linkLstTest3.iterator()</span><span class="s2">;</span><span class="s1"> 
+        iter3.remove()</span><span class="s2">;</span><span class="s1"> 
+    } 
+    </span><span class="s3">/** 
+     * array_list_int method is to test the linklist for int 
+     */</span><span class="s1"> 
+    </span><span class="s2">private static void </span><span class="s1">array_list_int(){ 
+        System.out.println(</span><span class="s5">&quot;**************************************&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        System.out.println(</span><span class="s5">&quot;**********ArrayList integer***********&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        System.out.println(</span><span class="s5">&quot;**************************************&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        arrayList&lt;Integer&gt; arrayLstTest = </span><span class="s2">new </span><span class="s1">arrayList&lt;&gt;()</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">try </span><span class="s1">{ 
+            System.out.println(</span><span class="s5">&quot;Elements add to arrayLstTest&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+            arrayLstTest.add(</span><span class="s6">14</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+            arrayLstTest.add(</span><span class="s6">14</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+            arrayLstTest.add(</span><span class="s6">33</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+            arrayLstTest.add(</span><span class="s6">4956</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+            arrayLstTest.add(</span><span class="s6">543</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        } </span><span class="s2">catch </span><span class="s1">(Exception ex) { 
+            System.out.println(</span><span class="s5">&quot;TEST ERROR&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+            </span><span class="s2">throw </span><span class="s1">ex</span><span class="s2">;</span><span class="s1"> 
+        } 
+ 
+        Iterator iter=arrayLstTest.iterator()</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">while</span><span class="s1">(iter.hasNext()) 
+            System.out.print(iter.next()+</span><span class="s5">&quot; &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println()</span><span class="s2">;</span><span class="s1"> 
+        System.out.println(</span><span class="s5">&quot;Size of arrayLstTest : &quot; </span><span class="s1">+ arrayLstTest.size())</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println(</span><span class="s5">&quot;Elements add to arrayLstTest2&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        arrayList&lt;Integer&gt; arrayLstTest2 = </span><span class="s2">new </span><span class="s1">arrayList&lt;&gt;()</span><span class="s2">;</span><span class="s1"> 
+        arrayLstTest2.add(</span><span class="s6">114</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        arrayLstTest2.add(</span><span class="s6">67</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        arrayLstTest2.add(</span><span class="s6">789</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        arrayLstTest2.add(</span><span class="s6">811</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        Iterator iter2=arrayLstTest2.iterator()</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">while</span><span class="s1">(iter2.hasNext()) 
+            System.out.print(iter2.next()+</span><span class="s5">&quot; &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println()</span><span class="s2">;</span><span class="s1"> 
+        System.out.println(</span><span class="s5">&quot;Size of arrayLstTest2 : &quot; </span><span class="s1">+ arrayLstTest2.size())</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println(</span><span class="s5">&quot;arrayLstTest2 elements add to arrayLstTest&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        arrayLstTest.addAll(arrayLstTest2)</span><span class="s2">;</span><span class="s1"> 
+ 
+        iter=arrayLstTest.iterator()</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">while</span><span class="s1">(iter.hasNext()) 
+            System.out.print(iter.next()+</span><span class="s5">&quot; &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println()</span><span class="s2">;</span><span class="s1"> 
+        System.out.println(</span><span class="s5">&quot;Size of arrayLstTest : &quot; </span><span class="s1">+ arrayLstTest.size())</span><span class="s2">;</span><span class="s1"> 
+ 
+ 
+        System.out.println(</span><span class="s5">&quot;Remove element '33' from arrayLstTest&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        arrayLstTest.remove(</span><span class="s6">33</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        iter=arrayLstTest.iterator()</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">while</span><span class="s1">(iter.hasNext()) 
+            System.out.print(iter.next()+</span><span class="s5">&quot; &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println()</span><span class="s2">;</span><span class="s1"> 
+        System.out.println(</span><span class="s5">&quot;Size of arrayLstTest : &quot; </span><span class="s1">+ arrayLstTest.size())</span><span class="s2">;</span><span class="s1"> 
+ 
+ 
+        System.out.println(</span><span class="s5">&quot;Remove arrayLstTest2 elements from arrayLstTest&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        arrayLstTest.removeAll(arrayLstTest2)</span><span class="s2">;</span><span class="s1"> 
+ 
+        iter=arrayLstTest.iterator()</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">while</span><span class="s1">(iter.hasNext()) 
+            System.out.print(iter.next()+</span><span class="s5">&quot; &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println()</span><span class="s2">;</span><span class="s1"> 
+        System.out.println(</span><span class="s5">&quot;Size of arrayLstTest : &quot; </span><span class="s1">+ arrayLstTest.size())</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println(</span><span class="s5">&quot;Clear arrayLstTest2&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        arrayLstTest2.clear()</span><span class="s2">;</span><span class="s1"> 
+        System.out.println(</span><span class="s5">&quot;Size of arrayLstTest2 : &quot; </span><span class="s1">+ arrayLstTest2.size())</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println(</span><span class="s5">&quot;Elements add to arrayLstTest3&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        arrayList&lt;Integer&gt; arrayLstTest3 = </span><span class="s2">new </span><span class="s1">arrayList&lt;&gt;()</span><span class="s2">;</span><span class="s1"> 
+        arrayLstTest3.add(</span><span class="s6">11</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        arrayLstTest3.add(</span><span class="s6">16</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        arrayLstTest3.add(</span><span class="s6">17</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        arrayLstTest3.add(</span><span class="s6">18</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        arrayLstTest3.add(</span><span class="s6">200</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        arrayLstTest3.add(</span><span class="s6">55</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        arrayLstTest3.add(</span><span class="s6">889</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        Iterator iter3=arrayLstTest3.iterator()</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">while</span><span class="s1">(iter3.hasNext()) 
+            System.out.print(iter3.next()+</span><span class="s5">&quot; &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println()</span><span class="s2">;</span><span class="s1"> 
+        System.out.println(</span><span class="s5">&quot;Size of arrayLstTest3 : &quot; </span><span class="s1">+ arrayLstTest3.size())</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println(</span><span class="s5">&quot;Elements add to arrayLstTest4&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        arrayList&lt;Integer&gt; arrayLstTest4 = </span><span class="s2">new </span><span class="s1">arrayList&lt;&gt;()</span><span class="s2">;</span><span class="s1"> 
+        arrayLstTest4.add(</span><span class="s6">11</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        arrayLstTest4.add(</span><span class="s6">16</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        Iterator iter4=arrayLstTest4.iterator()</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">while</span><span class="s1">(iter4.hasNext()) 
+            System.out.print(iter4.next()+</span><span class="s5">&quot; &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println()</span><span class="s2">;</span><span class="s1"> 
+        System.out.println(</span><span class="s5">&quot;Size of arrayLstTest4 : &quot; </span><span class="s1">+ arrayLstTest4.size())</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.print(</span><span class="s5">&quot;Contains function for element '18' in arrayLstTest3 = &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">if</span><span class="s1">(arrayLstTest3.contains(</span><span class="s6">18</span><span class="s1">)) 
+            System.out.println(</span><span class="s5">&quot;true&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">else</span><span class="s1"> 
+            System.out.println(</span><span class="s5">&quot;false&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.print(</span><span class="s5">&quot;Contains function for element '1000' in arrayLstTest3 = &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">if</span><span class="s1">(arrayLstTest3.contains(</span><span class="s6">1000</span><span class="s1">)) 
+            System.out.println(</span><span class="s5">&quot;true&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">else</span><span class="s1"> 
+            System.out.println(</span><span class="s5">&quot;false&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.print(</span><span class="s5">&quot;ContainsAll function for arrayLstTest4 elements in arrayLstTest3 = &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">if</span><span class="s1">(arrayLstTest3.containsAll(arrayLstTest4)) 
+            System.out.println(</span><span class="s5">&quot;true&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">else</span><span class="s1"> 
+            System.out.println(</span><span class="s5">&quot;false&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+ 
+        System.out.println(</span><span class="s5">&quot;RetainAll function for arrayLstTest3 between arrayLstTest4&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        arrayLstTest3.retainAll(arrayLstTest4)</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.print(</span><span class="s5">&quot;arrayLstTest3 elements : &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        iter3=arrayLstTest3.iterator()</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">while</span><span class="s1">(iter3.hasNext()) 
+            System.out.print(iter3.next()+</span><span class="s5">&quot; &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println()</span><span class="s2">;</span><span class="s1"> 
+        System.out.println(</span><span class="s5">&quot;Size of arrayLstTest3 : &quot; </span><span class="s1">+ arrayLstTest3.size())</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.print(</span><span class="s5">&quot;arrayLstTest3 is empty = &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">if</span><span class="s1">(arrayLstTest3.isEmpty()) 
+            System.out.println(</span><span class="s5">&quot;true&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">else</span><span class="s1"> 
+            System.out.println(</span><span class="s5">&quot;false&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        iter3=arrayLstTest3.iterator()</span><span class="s2">;</span><span class="s1"> 
+        iter3.remove()</span><span class="s2">;</span><span class="s1"> 
+    } 
+ 
+    </span><span class="s3">/** 
+     * array_list_string method is to test the linklist for string 
+     */</span><span class="s1"> 
+    </span><span class="s2">private static void </span><span class="s1">array_list_string(){ 
+        System.out.println(</span><span class="s5">&quot;**************************************&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        System.out.println(</span><span class="s5">&quot;**********ArrayList String************&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        System.out.println(</span><span class="s5">&quot;**************************************&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        arrayList&lt;String&gt; arrayLstTest = </span><span class="s2">new </span><span class="s1">arrayList&lt;&gt;()</span><span class="s2">;</span><span class="s1"> 
+ 
+        </span><span class="s2">try </span><span class="s1">{ 
+            System.out.println(</span><span class="s5">&quot;Elements add to arrayLstTest&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+            arrayLstTest.add(</span><span class="s5">&quot;murat&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+            arrayLstTest.add(</span><span class="s5">&quot;emre&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+            arrayLstTest.add(</span><span class="s5">&quot;nurullah&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+            arrayLstTest.add(</span><span class="s5">&quot;samet&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+            arrayLstTest.add(</span><span class="s5">&quot;fali&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        } </span><span class="s2">catch </span><span class="s1">(Exception ex) { 
+            System.out.println(</span><span class="s5">&quot;TEST ERROR&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+            </span><span class="s2">throw </span><span class="s1">ex</span><span class="s2">;</span><span class="s1"> 
+        } 
+ 
+        Iterator iter=arrayLstTest.iterator()</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">while</span><span class="s1">(iter.hasNext()) 
+            System.out.print(iter.next()+</span><span class="s5">&quot; &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println()</span><span class="s2">;</span><span class="s1"> 
+        System.out.println(</span><span class="s5">&quot;Size of arrayLstTest : &quot; </span><span class="s1">+ arrayLstTest.size())</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println(</span><span class="s5">&quot;Elements add to arrayLstTest2&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        arrayList&lt;String&gt; arrayLstTest2 = </span><span class="s2">new </span><span class="s1">arrayList&lt;&gt;()</span><span class="s2">;</span><span class="s1"> 
+        arrayLstTest2.add(</span><span class="s5">&quot;izmir&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        arrayLstTest2.add(</span><span class="s5">&quot;denizli&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        arrayLstTest2.add(</span><span class="s5">&quot;edirne&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        arrayLstTest2.add(</span><span class="s5">&quot;ankara&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        Iterator iter2=arrayLstTest2.iterator()</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">while</span><span class="s1">(iter2.hasNext()) 
+            System.out.print(iter2.next()+</span><span class="s5">&quot; &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println()</span><span class="s2">;</span><span class="s1"> 
+        System.out.println(</span><span class="s5">&quot;Size of arrayLstTest2 : &quot; </span><span class="s1">+ arrayLstTest2.size())</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println(</span><span class="s5">&quot;arrayLstTest2 elements add to arrayLstTest&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        arrayLstTest.addAll(arrayLstTest2)</span><span class="s2">;</span><span class="s1"> 
+ 
+        iter=arrayLstTest.iterator()</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">while</span><span class="s1">(iter.hasNext()) 
+            System.out.print(iter.next()+</span><span class="s5">&quot; &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println()</span><span class="s2">;</span><span class="s1"> 
+        System.out.println(</span><span class="s5">&quot;Size of arrayLstTest : &quot; </span><span class="s1">+ arrayLstTest.size())</span><span class="s2">;</span><span class="s1"> 
+ 
+ 
+        System.out.println(</span><span class="s5">&quot;Remove element 'murat' from arrayLstTest&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        arrayLstTest.remove(</span><span class="s5">&quot;murat&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        iter=arrayLstTest.iterator()</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">while</span><span class="s1">(iter.hasNext()) 
+            System.out.print(iter.next()+</span><span class="s5">&quot; &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println()</span><span class="s2">;</span><span class="s1"> 
+        System.out.println(</span><span class="s5">&quot;Size of arrayLstTest : &quot; </span><span class="s1">+ arrayLstTest.size())</span><span class="s2">;</span><span class="s1"> 
+ 
+ 
+        System.out.println(</span><span class="s5">&quot;Remove arrayLstTest2 elements from arrayLstTest&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        arrayLstTest.removeAll(arrayLstTest2)</span><span class="s2">;</span><span class="s1"> 
+ 
+        iter=arrayLstTest.iterator()</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">while</span><span class="s1">(iter.hasNext()) 
+            System.out.print(iter.next()+</span><span class="s5">&quot; &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println()</span><span class="s2">;</span><span class="s1"> 
+        System.out.println(</span><span class="s5">&quot;Size of arrayLstTest : &quot; </span><span class="s1">+ arrayLstTest.size())</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println(</span><span class="s5">&quot;Clear arrayLstTest2&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        arrayLstTest2.clear()</span><span class="s2">;</span><span class="s1"> 
+        System.out.println(</span><span class="s5">&quot;Size of arrayLstTest2 : &quot; </span><span class="s1">+ arrayLstTest2.size())</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println(</span><span class="s5">&quot;Elements add to arrayLstTest3&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        arrayList&lt;String&gt; arrayLstTest3 = </span><span class="s2">new </span><span class="s1">arrayList&lt;&gt;()</span><span class="s2">;</span><span class="s1"> 
+        arrayLstTest3.add(</span><span class="s5">&quot;i&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        arrayLstTest3.add(</span><span class="s5">&quot;p&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        arrayLstTest3.add(</span><span class="s5">&quot;e&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        arrayLstTest3.add(</span><span class="s5">&quot;k&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        Iterator iter3=arrayLstTest3.iterator()</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">while</span><span class="s1">(iter3.hasNext()) 
+            System.out.print(iter3.next()+</span><span class="s5">&quot; &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println()</span><span class="s2">;</span><span class="s1"> 
+        System.out.println(</span><span class="s5">&quot;Size of arrayLstTest3 : &quot; </span><span class="s1">+ arrayLstTest3.size())</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println(</span><span class="s5">&quot;Elements add to arrayLstTest4&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        arrayList&lt;String&gt; arrayLstTest4 = </span><span class="s2">new </span><span class="s1">arrayList&lt;&gt;()</span><span class="s2">;</span><span class="s1"> 
+        arrayLstTest4.add(</span><span class="s5">&quot;p&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        arrayLstTest4.add(</span><span class="s5">&quot;k&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        Iterator iter4=arrayLstTest4.iterator()</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">while</span><span class="s1">(iter4.hasNext()) 
+            System.out.print(iter4.next()+</span><span class="s5">&quot; &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println()</span><span class="s2">;</span><span class="s1"> 
+        System.out.println(</span><span class="s5">&quot;Size of arrayLstTest4 : &quot; </span><span class="s1">+ arrayLstTest4.size())</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.print(</span><span class="s5">&quot;Contains function for element 'k' in arrayLstTest3 = &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">if</span><span class="s1">(arrayLstTest3.contains(</span><span class="s5">&quot;k&quot;</span><span class="s1">)) 
+            System.out.println(</span><span class="s5">&quot;true&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">else</span><span class="s1"> 
+            System.out.println(</span><span class="s5">&quot;false&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.print(</span><span class="s5">&quot;Contains function for element 'x' in arrayLstTest3 = &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">if</span><span class="s1">(arrayLstTest3.contains(</span><span class="s5">&quot;x&quot;</span><span class="s1">)) 
+            System.out.println(</span><span class="s5">&quot;true&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">else</span><span class="s1"> 
+            System.out.println(</span><span class="s5">&quot;false&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.print(</span><span class="s5">&quot;ContainsAll function for arrayLstTest4 elements in arrayLstTest3 = &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">if</span><span class="s1">(arrayLstTest3.containsAll(arrayLstTest4)) 
+            System.out.println(</span><span class="s5">&quot;true&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">else</span><span class="s1"> 
+            System.out.println(</span><span class="s5">&quot;false&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println(</span><span class="s5">&quot;RetainAll function for arrayLstTest3 between arrayLstTest4&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        arrayLstTest3.retainAll(arrayLstTest4)</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.print(</span><span class="s5">&quot;arrayLstTest3 elements : &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        iter3=arrayLstTest3.iterator()</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">while</span><span class="s1">(iter3.hasNext()) 
+            System.out.print(iter3.next()+</span><span class="s5">&quot; &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println()</span><span class="s2">;</span><span class="s1"> 
+        System.out.println(</span><span class="s5">&quot;Size of arrayLstTest3 : &quot; </span><span class="s1">+ arrayLstTest3.size())</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.print(</span><span class="s5">&quot;arrayLstTest3 is empty = &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">if</span><span class="s1">(arrayLstTest3.isEmpty()) 
+            System.out.println(</span><span class="s5">&quot;true&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">else</span><span class="s1"> 
+            System.out.println(</span><span class="s5">&quot;false&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        iter3=arrayLstTest3.iterator()</span><span class="s2">;</span><span class="s1"> 
+        iter3.remove()</span><span class="s2">;</span><span class="s1"> 
+ 
+    } 
+    </span><span class="s3">/** 
+     * hash_set_int method is to test the linklist for int 
+     */</span><span class="s1"> 
+    </span><span class="s2">private static void </span><span class="s1">hash_set_int(){ 
+        System.out.println(</span><span class="s5">&quot;**************************************&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        System.out.println(</span><span class="s5">&quot;***********HashSet integer************&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        System.out.println(</span><span class="s5">&quot;**************************************&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        hashset&lt;Integer&gt; setTest = </span><span class="s2">new </span><span class="s1">hashset&lt;&gt;()</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">try </span><span class="s1">{ 
+            System.out.println(</span><span class="s5">&quot;Elements add to setTest&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+            setTest.add(</span><span class="s6">11</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+            setTest.add(</span><span class="s6">11</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+            setTest.add(</span><span class="s6">33</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+            setTest.add(</span><span class="s6">44</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+            setTest.add(</span><span class="s6">55</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        } </span><span class="s2">catch </span><span class="s1">(Exception ex) { 
+            System.out.println(</span><span class="s5">&quot;TEST ERROR&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+            </span><span class="s2">throw </span><span class="s1">ex</span><span class="s2">;</span><span class="s1"> 
+        } 
+ 
+        Iterator iter=setTest.iterator()</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">while</span><span class="s1">(iter.hasNext()) 
+            System.out.print(iter.next()+</span><span class="s5">&quot; &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println()</span><span class="s2">;</span><span class="s1"> 
+        System.out.println(</span><span class="s5">&quot;Size of setTest : &quot; </span><span class="s1">+ setTest.size())</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println(</span><span class="s5">&quot;Elements add to setTest2&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        hashset&lt;Integer&gt; setTest2 = </span><span class="s2">new </span><span class="s1">hashset&lt;&gt;()</span><span class="s2">;</span><span class="s1"> 
+        setTest2.add(</span><span class="s6">666</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        setTest2.add(</span><span class="s6">777</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        setTest2.add(</span><span class="s6">888</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        setTest2.add(</span><span class="s6">999</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        Iterator iter2=setTest2.iterator()</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">while</span><span class="s1">(iter2.hasNext()) 
+            System.out.print(iter2.next()+</span><span class="s5">&quot; &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println()</span><span class="s2">;</span><span class="s1"> 
+        System.out.println(</span><span class="s5">&quot;Size of setTest2 : &quot; </span><span class="s1">+ setTest2.size())</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println(</span><span class="s5">&quot;setTest2 elements add to setTest&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        setTest.addAll(setTest2)</span><span class="s2">;</span><span class="s1"> 
+ 
+        iter=setTest.iterator()</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">while</span><span class="s1">(iter.hasNext()) 
+            System.out.print(iter.next()+</span><span class="s5">&quot; &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println()</span><span class="s2">;</span><span class="s1"> 
+        System.out.println(</span><span class="s5">&quot;Size of setTest : &quot; </span><span class="s1">+ setTest.size())</span><span class="s2">;</span><span class="s1"> 
+ 
+ 
+        System.out.println(</span><span class="s5">&quot;Remove element '33' from setTest&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        setTest.remove(</span><span class="s6">33</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        iter=setTest.iterator()</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">while</span><span class="s1">(iter.hasNext()) 
+            System.out.print(iter.next()+</span><span class="s5">&quot; &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println()</span><span class="s2">;</span><span class="s1"> 
+        System.out.println(</span><span class="s5">&quot;Size of setTest : &quot; </span><span class="s1">+ setTest.size())</span><span class="s2">;</span><span class="s1"> 
+ 
+ 
+        System.out.println(</span><span class="s5">&quot;Remove setTest2 elements from setTest&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        setTest.removeAll(setTest2)</span><span class="s2">;</span><span class="s1"> 
+ 
+        iter=setTest.iterator()</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">while</span><span class="s1">(iter.hasNext()) 
+            System.out.print(iter.next()+</span><span class="s5">&quot; &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println()</span><span class="s2">;</span><span class="s1"> 
+        System.out.println(</span><span class="s5">&quot;Size of setTest : &quot; </span><span class="s1">+ setTest.size())</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println(</span><span class="s5">&quot;Clear setTest2&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        setTest2.clear()</span><span class="s2">;</span><span class="s1"> 
+        System.out.println(</span><span class="s5">&quot;Size of setTest2 : &quot; </span><span class="s1">+ setTest2.size())</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println(</span><span class="s5">&quot;Elements add to setTest3&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        hashset&lt;Integer&gt; setTest3 = </span><span class="s2">new </span><span class="s1">hashset&lt;&gt;()</span><span class="s2">;</span><span class="s1"> 
+        setTest3.add(</span><span class="s6">11</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        setTest3.add(</span><span class="s6">16</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        setTest3.add(</span><span class="s6">17</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        setTest3.add(</span><span class="s6">18</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        setTest3.add(</span><span class="s6">55</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        setTest3.add(</span><span class="s6">200</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        setTest3.add(</span><span class="s6">889</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        Iterator iter3=setTest3.iterator()</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">while</span><span class="s1">(iter3.hasNext()) 
+            System.out.print(iter3.next()+</span><span class="s5">&quot; &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println()</span><span class="s2">;</span><span class="s1"> 
+        System.out.println(</span><span class="s5">&quot;Size of setTest3 : &quot; </span><span class="s1">+ setTest3.size())</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println(</span><span class="s5">&quot;Elements add to setTest4&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        hashset&lt;Integer&gt; setTest4 = </span><span class="s2">new </span><span class="s1">hashset&lt;&gt;()</span><span class="s2">;</span><span class="s1"> 
+        setTest4.add(</span><span class="s6">11</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        setTest4.add(</span><span class="s6">16</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        Iterator iter4=setTest4.iterator()</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">while</span><span class="s1">(iter4.hasNext()) 
+            System.out.print(iter4.next()+</span><span class="s5">&quot; &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println()</span><span class="s2">;</span><span class="s1"> 
+        System.out.println(</span><span class="s5">&quot;Size of setTest4 : &quot; </span><span class="s1">+ setTest4.size())</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.print(</span><span class="s5">&quot;Contains function for element '18' in setTest3 = &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">if</span><span class="s1">(setTest3.contains(</span><span class="s6">18</span><span class="s1">)) 
+            System.out.println(</span><span class="s5">&quot;true&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">else</span><span class="s1"> 
+            System.out.println(</span><span class="s5">&quot;false&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.print(</span><span class="s5">&quot;Contains function for element '45642' in setTest3 = &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">if</span><span class="s1">(setTest3.contains(</span><span class="s6">45642</span><span class="s1">)) 
+            System.out.println(</span><span class="s5">&quot;true&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">else</span><span class="s1"> 
+            System.out.println(</span><span class="s5">&quot;false&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.print(</span><span class="s5">&quot;ContainsAll function for setTest4 elements in setTest3 = &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">if</span><span class="s1">(setTest3.containsAll(setTest4)) 
+            System.out.println(</span><span class="s5">&quot;true&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">else</span><span class="s1"> 
+            System.out.println(</span><span class="s5">&quot;false&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+ 
+        System.out.println(</span><span class="s5">&quot;RetainAll function for setTest3 between setTest4&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        setTest3.retainAll(setTest4)</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.print(</span><span class="s5">&quot;setTest3 elements : &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        iter3=setTest3.iterator()</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">while</span><span class="s1">(iter3.hasNext()) 
+            System.out.print(iter3.next()+</span><span class="s5">&quot; &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println()</span><span class="s2">;</span><span class="s1"> 
+        System.out.println(</span><span class="s5">&quot;Size of setTest3 : &quot; </span><span class="s1">+ setTest3.size())</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.print(</span><span class="s5">&quot;setTest3 is empty = &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">if</span><span class="s1">(setTest3.isEmpty()) 
+            System.out.println(</span><span class="s5">&quot;true&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">else</span><span class="s1"> 
+            System.out.println(</span><span class="s5">&quot;false&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        iter3=setTest3.iterator()</span><span class="s2">;</span><span class="s1"> 
+        iter3.remove()</span><span class="s2">;</span><span class="s1"> 
+    } 
+ 
+    </span><span class="s3">/** 
+     * hash_set_string method is to test the linklist for string 
+     */</span><span class="s1"> 
+    </span><span class="s2">private static void </span><span class="s1">hash_set_string(){ 
+        System.out.println(</span><span class="s5">&quot;**************************************&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        System.out.println(</span><span class="s5">&quot;***********HashSet String*************&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        System.out.println(</span><span class="s5">&quot;**************************************&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        hashset&lt;String&gt; setTest = </span><span class="s2">new </span><span class="s1">hashset&lt;&gt;()</span><span class="s2">;</span><span class="s1"> 
+ 
+        </span><span class="s2">try </span><span class="s1">{ 
+            System.out.println(</span><span class="s5">&quot;Elements add to setTest&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+            setTest.add(</span><span class="s5">&quot;e&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+            setTest.add(</span><span class="s5">&quot;m&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+            setTest.add(</span><span class="s5">&quot;r&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+            setTest.add(</span><span class="s5">&quot;e&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+            setTest.add(</span><span class="s5">&quot;u&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        } </span><span class="s2">catch </span><span class="s1">(Exception ex) { 
+            System.out.println(</span><span class="s5">&quot;TEST ERROR&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+            </span><span class="s2">throw </span><span class="s1">ex</span><span class="s2">;</span><span class="s1"> 
+        } 
+        Iterator iter=setTest.iterator()</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">while</span><span class="s1">(iter.hasNext()) 
+            System.out.print(iter.next()+</span><span class="s5">&quot; &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println()</span><span class="s2">;</span><span class="s1"> 
+        System.out.println(</span><span class="s5">&quot;Size of setTest : &quot; </span><span class="s1">+ setTest.size())</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println(</span><span class="s5">&quot;Elements add to setTest2&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        hashset&lt;String&gt; setTest2 = </span><span class="s2">new </span><span class="s1">hashset&lt;&gt;()</span><span class="s2">;</span><span class="s1"> 
+        setTest2.add(</span><span class="s5">&quot;s&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        setTest2.add(</span><span class="s5">&quot;t&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        setTest2.add(</span><span class="s5">&quot;v&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        setTest2.add(</span><span class="s5">&quot;z&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        Iterator iter2=setTest2.iterator()</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">while</span><span class="s1">(iter2.hasNext()) 
+            System.out.print(iter2.next()+</span><span class="s5">&quot; &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println()</span><span class="s2">;</span><span class="s1"> 
+        System.out.println(</span><span class="s5">&quot;Size of setTest2 : &quot; </span><span class="s1">+ setTest2.size())</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println(</span><span class="s5">&quot;setTest2 elements add to setTest&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        setTest.addAll(setTest2)</span><span class="s2">;</span><span class="s1"> 
+ 
+        iter=setTest.iterator()</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">while</span><span class="s1">(iter.hasNext()) 
+            System.out.print(iter.next()+</span><span class="s5">&quot; &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println()</span><span class="s2">;</span><span class="s1"> 
+        System.out.println(</span><span class="s5">&quot;Size of setTest : &quot; </span><span class="s1">+ setTest.size())</span><span class="s2">;</span><span class="s1"> 
+ 
+ 
+        System.out.println(</span><span class="s5">&quot;Remove element 'e' from setTest&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        setTest.remove(</span><span class="s5">&quot;e&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        iter=setTest.iterator()</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">while</span><span class="s1">(iter.hasNext()) 
+            System.out.print(iter.next()+</span><span class="s5">&quot; &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println()</span><span class="s2">;</span><span class="s1"> 
+        System.out.println(</span><span class="s5">&quot;Size of setTest : &quot; </span><span class="s1">+ setTest.size())</span><span class="s2">;</span><span class="s1"> 
+ 
+ 
+        System.out.println(</span><span class="s5">&quot;Remove setTest2 elements from setTest&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        setTest.removeAll(setTest2)</span><span class="s2">;</span><span class="s1"> 
+ 
+        iter=setTest.iterator()</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">while</span><span class="s1">(iter.hasNext()) 
+            System.out.print(iter.next()+</span><span class="s5">&quot; &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println()</span><span class="s2">;</span><span class="s1"> 
+        System.out.println(</span><span class="s5">&quot;Size of setTest : &quot; </span><span class="s1">+ setTest.size())</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println(</span><span class="s5">&quot;Clear setTest2&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        setTest2.clear()</span><span class="s2">;</span><span class="s1"> 
+        System.out.println(</span><span class="s5">&quot;Size of setTest2 : &quot; </span><span class="s1">+ setTest2.size())</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println(</span><span class="s5">&quot;Elements add to setTest3&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        hashset&lt;String&gt; setTest3 = </span><span class="s2">new </span><span class="s1">hashset&lt;&gt;()</span><span class="s2">;</span><span class="s1"> 
+ 
+        setTest3.add(</span><span class="s5">&quot;e&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        setTest3.add(</span><span class="s5">&quot;i&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        setTest3.add(</span><span class="s5">&quot;h&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        setTest3.add(</span><span class="s5">&quot;x&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+ 
+        Iterator iter3=setTest3.iterator()</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">while</span><span class="s1">(iter3.hasNext()) 
+            System.out.print(iter3.next()+</span><span class="s5">&quot; &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println()</span><span class="s2">;</span><span class="s1"> 
+        System.out.println(</span><span class="s5">&quot;Size of setTest3 : &quot; </span><span class="s1">+ setTest3.size())</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println(</span><span class="s5">&quot;Elements add to setTest4&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        hashset&lt;String&gt; setTest4 = </span><span class="s2">new </span><span class="s1">hashset&lt;&gt;()</span><span class="s2">;</span><span class="s1"> 
+        setTest4.add(</span><span class="s5">&quot;h&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        setTest4.add(</span><span class="s5">&quot;x&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        Iterator iter4=setTest4.iterator()</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">while</span><span class="s1">(iter4.hasNext()) 
+            System.out.print(iter4.next()+</span><span class="s5">&quot; &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println()</span><span class="s2">;</span><span class="s1"> 
+        System.out.println(</span><span class="s5">&quot;Size of setTest4 : &quot; </span><span class="s1">+ setTest4.size())</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.print(</span><span class="s5">&quot;Contains function for element 'z' in setTest3 = &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">if</span><span class="s1">(setTest3.contains(</span><span class="s5">&quot;z&quot;</span><span class="s1">)) 
+            System.out.println(</span><span class="s5">&quot;true&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">else</span><span class="s1"> 
+            System.out.println(</span><span class="s5">&quot;false&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.print(</span><span class="s5">&quot;Contains function for element 'x' in setTest3 = &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">if</span><span class="s1">(setTest3.contains(</span><span class="s5">&quot;x&quot;</span><span class="s1">)) 
+            System.out.println(</span><span class="s5">&quot;true&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">else</span><span class="s1"> 
+            System.out.println(</span><span class="s5">&quot;false&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.print(</span><span class="s5">&quot;ContainsAll function for setTest4 elements in setTest3 = &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">if</span><span class="s1">(setTest3.containsAll(setTest4)) 
+            System.out.println(</span><span class="s5">&quot;true&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">else</span><span class="s1"> 
+            System.out.println(</span><span class="s5">&quot;false&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println(</span><span class="s5">&quot;RetainAll function for setTest3 between setTest4&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        setTest3.retainAll(setTest4)</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.print(</span><span class="s5">&quot;setTest3 elements : &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        iter3=setTest3.iterator()</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">while</span><span class="s1">(iter3.hasNext()) 
+            System.out.print(iter3.next()+</span><span class="s5">&quot; &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.println()</span><span class="s2">;</span><span class="s1"> 
+        System.out.println(</span><span class="s5">&quot;Size of setTest3 : &quot; </span><span class="s1">+ setTest3.size())</span><span class="s2">;</span><span class="s1"> 
+ 
+        System.out.print(</span><span class="s5">&quot;setTest3 is empty = &quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">if</span><span class="s1">(setTest3.isEmpty()) 
+            System.out.println(</span><span class="s5">&quot;true&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">else</span><span class="s1"> 
+            System.out.println(</span><span class="s5">&quot;false&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+ 
+        iter3=setTest3.iterator()</span><span class="s2">;</span><span class="s1"> 
+        iter3.remove()</span><span class="s2">;</span><span class="s1"> 
+    } 
+} 
+</span></pre>
+</body>
+</html>

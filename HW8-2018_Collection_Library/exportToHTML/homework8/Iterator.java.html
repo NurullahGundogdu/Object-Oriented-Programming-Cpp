@@ -1,0 +1,81 @@
+<html>
+<head>
+<title>Iterator.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: #606366; font-weight: normal; font-style: normal; }
+.s0 { color: rgb(128,128,128); }
+.s1 { color: rgb(169,183,198); }
+.s2 { color: rgb(204,120,50); }
+.s3 { color: rgb(98,151,85); font-style: italic; }
+.s4 { color: rgb(98,151,85); font-weight: bold; font-style: italic; }
+.s5 { color: rgb(106,135,89); }
+</style>
+</head>
+<BODY BGCOLOR="#2b2b2b">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+Iterator.java</FONT>
+</center></TD></TR></TABLE>
+<pre>
+<span class="s0">/* 
+ * To change this license header, choose License Headers in Project Properties. 
+ * To change this template file, choose Tools | Templates 
+ * and open the template in the editor. 
+ */</span><span class="s1"> 
+</span><span class="s2">package </span><span class="s1">homework8</span><span class="s2">;</span><span class="s1"> 
+</span><span class="s3">/** 
+ * </span><span class="s4">@author </span><span class="s3">Nurullah GUNDOGDU 
+ * since 2019-1-16 
+ */</span><span class="s1"> 
+ 
+</span><span class="s2">class </span><span class="s1">Iterator &lt;E&gt;{ 
+    </span><span class="s3">/** 
+     * empty array instance used for list element 
+     */</span><span class="s1"> 
+    </span><span class="s2">private </span><span class="s1">Collection &lt;E&gt; obje</span><span class="s2">;</span><span class="s1"> 
+    </span><span class="s3">/** 
+     * index of the list 
+     */</span><span class="s1"> 
+    </span><span class="s2">private int </span><span class="s1">index</span><span class="s2">;</span><span class="s1"> 
+    </span><span class="s3">/** 
+     * constructur 
+     */</span><span class="s1"> 
+    Iterator(Collection &lt;E&gt; arr</span><span class="s2">, int </span><span class="s1">ind){ 
+        obje = arr</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">this</span><span class="s1">.index = ind</span><span class="s2">;</span><span class="s1"> 
+    } 
+    </span><span class="s3">/** 
+     * hasNext method Returns true if the iteration has more elements. 
+     * </span><span class="s4">@return </span><span class="s3">true if the iteration has more elements. 
+     */</span><span class="s1"> 
+    </span><span class="s2">boolean </span><span class="s1">hasNext(){ 
+ 
+        </span><span class="s2">return </span><span class="s1">(index &lt; obje.size())</span><span class="s2">;</span><span class="s1"> 
+    } 
+    </span><span class="s3">/** 
+     * next method Returns the next element in the iteration and advances the iterator. 
+     * </span><span class="s4">@return </span><span class="s3">e elements of list 
+     */</span><span class="s1"> 
+    E next(){ 
+        </span><span class="s2">if </span><span class="s1">(!hasNext()) { 
+            </span><span class="s2">throw new </span><span class="s1">IllegalAccessError(</span><span class="s5">&quot;error: no next element&quot;</span><span class="s1">)</span><span class="s2">;</span><span class="s1"> 
+        } 
+ 
+        E ret = obje.ARRAY(index)</span><span class="s2">;</span><span class="s1"> 
+        index++</span><span class="s2">;</span><span class="s1"> 
+        </span><span class="s2">return </span><span class="s1">ret</span><span class="s2">;</span><span class="s1"> 
+    } 
+    </span><span class="s3">/** 
+     * remove method remove list first element from list 
+     */</span><span class="s1"> 
+    </span><span class="s2">void </span><span class="s1">remove(){ 
+        E ret = obje.ARRAY(index)</span><span class="s2">;</span><span class="s1"> 
+        obje.remove(ret)</span><span class="s2">;</span><span class="s1"> 
+    } 
+ 
+} 
+</span></pre>
+</body>
+</html>
